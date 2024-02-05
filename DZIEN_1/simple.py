@@ -1,3 +1,5 @@
+import lambdy as lb
+
 print("Pierwszy program w języku Python!")
 
 def policz(a:int,b:float,c:float,y:int=5)->float:
@@ -12,3 +14,12 @@ print(t)
 print(type(t))
 
 print((lambda a:a+11)(8))
+
+d = lambda a,b,c=1:(a+b)*c
+print(d(15,3,2))
+print(d(2,2))
+
+print("__________ listy z biblioteki lambdy ______________")
+
+print(lb.nbparzyste)
+print(lb.cube)
