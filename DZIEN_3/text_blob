@@ -1,0 +1,18 @@
+from textblob import TextBlob
+
+sentence = "To jest świetny dzień. Cieszę się że możemy razem pracować!"
+s2 = "very terrible"
+
+blob = TextBlob(s2)
+sentiment_score = blob.sentiment.polarity
+
+if sentiment_score >0:
+    sentiment = "pozytywny"
+elif sentiment_score < 0:
+    sentiment="negatywny"
+else:
+    sentiment = "neutralny"
+
+print(f"tekst: {sentence}")
+print(f"wynik sentymentu:{sentiment}")
+print(f"wartość sentymentu: {sentiment_score}")
